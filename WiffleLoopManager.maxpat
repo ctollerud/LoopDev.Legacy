@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 97.0, 2406.0, 930.0 ],
+		"rect" : [ -482.0, 44.0, 2406.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1331,6 +1331,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-8",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
@@ -1686,10 +1687,10 @@
 					"id" : "obj-177",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 2018.5, 257.0, 24.0, 20.0 ],
-					"text" : "t 1"
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"patching_rect" : [ 2018.5, 257.0, 34.0, 20.0 ],
+					"text" : "t 1 b"
 				}
 
 			}
@@ -1703,7 +1704,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 2007.5, 194.0, 56.0, 20.0 ],
-					"text" : "delay 25"
+					"text" : "delay 40"
 				}
 
 			}
@@ -1713,12 +1714,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-173",
-					"linecount" : 9,
+					"linecount" : 11,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2065.5, 173.0, 204.0, 127.0 ],
-					"text" : "needs to:\n-turn on the track and overdub (wait 5 milliseconds)\n\n-trigger the clear/pre-buffering\n\n-enable all of the things that are usually disabled until record/resample have been pressed."
+					"patching_rect" : [ 2065.5, 173.0, 216.0, 154.0 ],
+					"text" : "needs to:\n-turn on the track and overdub (wait 5 milliseconds)\n\n-trigger the clear/pre-buffering\n\n-enable all of the things that are usually disabled until record/resample have been pressed.\n\n-normalize the track"
 				}
 
 			}
@@ -7396,6 +7397,16 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-176", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-150", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 2043.0, 714.0, 1719.0, 714.0, 1719.0, 801.0, 1718.5, 801.0 ],
+					"source" : [ "obj-177", 1 ]
 				}
 
 			}
