@@ -1,0 +1,135 @@
+MIDI controller mappings:
+NanoKontrols (will soon be consolidated onto launchpad 2)
+	All values are notes:
+	14-18: Delay Controls
+		14: Set to 1/16
+		15: Set to 1/8
+		16: Set to 3/16
+		17: Set to 1/4
+		18: Pingpong/simple delay toggle
+	
+	**112-123 : Right half of second nano
+		112-119 : Instrument Selection
+		120-123 : Pedal Control
+		
+	19-21: Reverb Decay Length
+
+MIDI Fighter:
+	36-99: MIDI Fighter (currently channel 3?)
+		36-51: Bank A
+		52-67: Bank B
+		68-83: Bank C
+		84-99: Bank D
+		
+Code:
+
+	CC:
+	encoders: CC #'s 0 - 31
+		encoders are mapped spatially, the bottom left encoder starting at 0,
+		row 1: 0-7
+		row 2: 8-15
+		row 3: 16-23
+		row 4: 24-31
+
+	Notes:
+		0 (C-2): clear FX chain
+		1 (C#-2): clear ADC chain
+		2 (D-2): "last" button
+
+		Vol/Gate/Pan toggle
+		3 (D#-2) = Vol
+		4 (E-2) = Pan
+		5 (F-2) = Gate 
+
+
+
+Launchpad:  hard-coded/unmappable
+
+
+MIDI loopback Mappings (MIDI Loopback):
+
+launchpad 2 Loopback: (config launchpad, channel 2)
+	Notes:
+		C-2 to D#-2 : Delay selection ---?? verify this…and what does what...
+		E-2 to B-2 : Loop Pedal Toggle
+			Controls which looper the pedals are set to control
+
+	MIDI CC:
+		22: Instrument Selector
+		40 : Delay Rate--
+		41 : Delay Type	--
+		42 : Reverb Decay ---not currently mapped
+	       43 : Prebuffer length selector
+                    0 = 1 measure
+                    1 = 2 mm
+                    2 = 4 mm
+                    3 = 8 mm
+                    4 = 16 mm
+                    5 = 2 n
+                    6 = 1 n
+                    7 =  8n
+		    8 = 16n
+
+CODE Loopback - channel 4
+
+	Notes:
+		D 0: Normalize ADC FX--xx?
+
+	MIDI CC:
+		0-7: Pan -- unmapped until exposed to the code
+		8: "Last" Button -- (in use?)
+		10-19: BCR Chain FX ---
+		20: ADC Reverb ---
+		21: ADC Delay ---
+		101-108 : Looper Volume ---
+		109-116: Looper Gate ---
+	
+		117-124 more main chain effects ---
+			117: phasing effect --
+                       118: beat repeat pitch decay
+			is it 123 that's busted?
+
+		125 : Metronome Volume --- 
+		127 : metronome on/off/volume --
+
+
+Launchpad (Loopers) LoopBack (channel 2):
+	Notes:
+		C 0 - metronome tempo init (pressing the tempo/deactivate button to start metro, set tempo )
+		C # 0 - metronome off 
+		D# 0 to A# 0: use for talkback -- talkback for BCR Looper Track Normalization (tracks 1-8 respectively )
+			-MIDI is mapped to BCR Normalization Modules
+		B 0 (35)  -- init. loop cancel
+		C 1 - G 1 -- 36-43 --- looper  pre-buffering triggers
+
+
+	MIDI CC:
+		45 - 60 : Main Looper CTL
+			45-52 : Record
+				0: off
+				126: resample
+				127: regular record
+
+		53-60 : Overdub
+		61-68 : On/Off
+
+		69-100 : Chain/Resample Routings--
+			69-76 : Direct--
+			77-84 : Chain--
+			85-92 : Direct Resample--
+			93-100 : Chain Resample--
+
+
+		CC # 123 appears to not want to route!
+
+	126: Looper Source:
+		0 = ADC
+		127 = Resample
+
+	MIDI Fighter (channel 5:)
+		cc:
+			0: beat repeat on/off
+			1: beat repeat rate
+
+
+
