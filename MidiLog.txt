@@ -114,10 +114,8 @@ Launchpad (Loopers) LoopBack (channel 2):
 		61-68 : On/Off
 
 		69-100 : Chain/Resample Routings--
-			69-76 : Direct--
-			77-84 : Chain--
-			85-92 : Direct Resample--
-			93-100 : Chain Resample--
+			69-76 : Direct/Chain routing
+			77-84 : direct resample send
 
 
 		CC # 123 appears to not want to route!
