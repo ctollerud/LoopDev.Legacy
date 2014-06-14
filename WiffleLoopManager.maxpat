@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -555.0, 44.0, 2406.0, 930.0 ],
+		"rect" : [ -295.0, 44.0, 2618.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1721,102 +1721,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-181",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 2010.0, 728.0, 24.0, 20.0 ],
-					"text" : "t b"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-184",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1956.0, 817.0, 37.0, 18.0 ],
-					"text" : "set 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-183",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 2017.25, 773.0, 32.5, 20.0 ],
-					"text" : "t b i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-178",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 2054.75, 967.0, 36.0, 20.0 ],
-					"text" : "pack"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-179",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1859.5, 831.0, 156.0, 60.0 ],
-					"text" : "Holds the note value of the launchpad button used for overdub on this looper\n(maybe unnecessary) -->"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-176",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 2026.25, 874.0, 32.5, 20.0 ],
-					"text" : "i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "note pairs for direct talkback",
-					"id" : "obj-175",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 2050.0, 1002.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "MIDI CC pairs for direct talkback",
 					"id" : "obj-172",
 					"maxclass" : "outlet",
@@ -1879,7 +1783,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 2007.5, 194.0, 56.0, 20.0 ],
-					"text" : "delay 40"
+					"text" : "delay 30"
 				}
 
 			}
@@ -1889,12 +1793,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-173",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2065.5, 173.0, 216.0, 154.0 ],
-					"text" : "needs to:\n-turn on the track and overdub (wait 5 milliseconds)\n\n-trigger the clear/pre-buffering\n\n-enable all of the things that are usually disabled until record/resample have been pressed.\n\n-normalize the track"
+					"patching_rect" : [ 2065.5, 173.0, 234.0, 141.0 ],
+					"text" : "needs to:\n-turn on the track and overdub (wait a bit)\n\n-trigger the clear/pre-buffering\n\n-enable all of the things that are usually disabled until record/resample have been pressed.\n\n-normalize the track"
 				}
 
 			}
@@ -6047,7 +5951,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 7,
 					"outlettype" : [ "int", "int", "int", "int", "int", "int", "int" ],
-					"patching_rect" : [ 996.0, 743.0, 119.0, 20.0 ],
+					"patching_rect" : [ 995.333313, 725.0, 119.0, 20.0 ],
 					"text" : "unpack 0 0 0 0 0 0 0"
 				}
 
@@ -7515,10 +7419,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-181", 0 ],
+					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-171", 1 ]
+					"midpoints" : [ 1984.0, 490.0, 541.5, 490.0 ],
+					"source" : [ "obj-171", 0 ]
 				}
 
 			}
@@ -7537,7 +7442,7 @@
 					"destination" : [ "obj-48", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1984.0, 400.5, 653.5, 400.5 ],
+					"midpoints" : [ 1984.0, 404.5, 653.5, 404.5 ],
 					"source" : [ "obj-171", 0 ]
 				}
 
@@ -7553,15 +7458,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-178", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-176", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-150", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -7572,30 +7468,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 2028.0, 490.0, 541.5, 490.0 ],
-					"source" : [ "obj-177", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 2028.0, 291.0, 1734.0, 291.0, 1734.0, 789.0, 672.5, 789.0 ],
 					"source" : [ "obj-177", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-175", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-178", 0 ]
 				}
 
 			}
@@ -7616,43 +7493,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 1951.25, 315.0, 1734.0, 315.0, 1734.0, 801.0, 1695.0, 801.0, 1695.0, 891.0, 1719.5, 891.0 ],
 					"source" : [ "obj-180", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-176", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-183", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-178", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-183", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-184", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-183", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1965.5, 837.0, 1866.0, 837.0, 1866.0, 792.0, 1548.0, 792.0, 1548.0, 783.0, 642.0, 783.0, 642.0, 744.0, 564.0, 744.0, 564.0, 699.0, 541.5, 699.0 ],
-					"source" : [ "obj-184", 0 ]
 				}
 
 			}
@@ -7708,7 +7548,7 @@
 					"destination" : [ "obj-152", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 397.5, 736.0, 628.0, 736.0, 628.0, 745.0, 685.0, 745.0, 685.0, 790.0, 1744.0, 790.0, 1744.0, 757.0, 1768.5, 757.0 ],
+					"midpoints" : [ 397.5, 736.0, 628.0, 736.0, 628.0, 745.0, 685.0, 745.0, 685.0, 796.0, 1744.0, 796.0, 1744.0, 757.0, 1768.5, 757.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -7883,18 +7723,8 @@
 					"destination" : [ "obj-150", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1072.166626, 796.0, 1732.0, 796.0 ],
+					"midpoints" : [ 1071.5, 796.0, 1732.0, 796.0 ],
 					"source" : [ "obj-23", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-176", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1105.5, 783.0, 1746.0, 783.0, 1746.0, 747.0, 2049.25, 747.0 ],
-					"source" : [ "obj-23", 6 ]
 				}
 
 			}
@@ -7912,7 +7742,7 @@
 					"destination" : [ "obj-180", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1088.833374, 772.0, 1514.0, 772.0, 1514.0, 114.0, 1964.75, 114.0 ],
+					"midpoints" : [ 1088.166626, 772.0, 1514.0, 772.0, 1514.0, 114.0, 1964.75, 114.0 ],
 					"source" : [ "obj-23", 5 ]
 				}
 
@@ -7958,7 +7788,7 @@
 					"destination" : [ "obj-95", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1055.5, 781.0, 1279.0, 781.0, 1279.0, 295.0, 1322.0, 295.0 ],
+					"midpoints" : [ 1054.833252, 781.0, 1279.0, 781.0, 1279.0, 295.0, 1322.0, 295.0 ],
 					"source" : [ "obj-23", 3 ]
 				}
 
