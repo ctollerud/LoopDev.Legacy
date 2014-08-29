@@ -1,5 +1,5 @@
 MIDI controller mappings:
-NanoKontrols (will soon be consolidated onto launchpad 2)
+launchpad 2 (will soon be consolidated onto launchpad 2)
 	All values are notes:
 	14-18: Delay Controls
 		14: Set to 1/16
@@ -51,8 +51,7 @@ MIDI loopback Mappings (MIDI Loopback):
 launchpad 2 Loopback: (config launchpad, channel 2)
 	Notes:
 		C-2 to D#-2 : Delay selection ---?? verify this…and what does what...
-		E-2 to B-2 : Loop Pedal Toggle
-			Controls which looper the pedals are set to control
+
 
 	MIDI CC:
 		22: Instrument Selector
@@ -69,6 +68,10 @@ launchpad 2 Loopback: (config launchpad, channel 2)
                     6 = 1 n
                     7 =  8n
 		    8 = 16n
+		
+		44-51: track monitor soloing (formerly the Loop Pedal Toggle)
+			Controls which looper the pedals are set to control
+		52: Direct out to monitors on/off
 
 CODE Loopback - channel 4
 
@@ -117,7 +120,9 @@ Launchpad (Loopers) LoopBack (channel 2):
 			69-76 : Direct/Chain routing
 			77-84 : direct resample send
 
-
+		101-108 : track monitor soloing (formerly the Loop Pedal Toggle)
+			Controls which looper the pedals are set to control
+		109 : Direct-to-monitor on/off (used for shutting off main mix when checking a specific track)
 		CC # 123 appears to not want to route!
 
 	126: Looper Source:
